@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.5)  5 AUG 2024 20:27
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.8.5)  5 AUG 2024 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -394,11 +394,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 81.
 
-Overfull \hbox (24.00002pt too wide) in paragraph at lines 81--115
- [][] 
- []
-
-
 
 [1
 
@@ -429,6 +424,6 @@ Here is how much of TeX's memory you used:
  34598 multiletter control sequences out of 15000+600000
  561317 words of font info for 65 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 79i,11n,93p,342b,368s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 79i,11n,93p,342b,376s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on Assignment_Template.pdf (3 pages).
