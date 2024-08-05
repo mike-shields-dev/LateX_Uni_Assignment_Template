@@ -1,51 +1,4 @@
-\documentclass[12pt]{article}
-
-% Set page margins
-\usepackage[a4paper, margin=0.8in]{geometry}
-
-% Use XeLaTeX or LuaLaTeX to handle system fonts
-\usepackage{fontspec}
-\setmainfont{Calibri Light} % Set main font to Calibri Light
-
-% Set line spacing to double
-\usepackage{setspace}
-\doublespacing
-
-% Format section headings with titlesec
-\usepackage{titlesec}
-
-% Set paragraph indentation to 0pt
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{14pt}
-
-% Define section format
-\titleformat{\section}
-  [hang]
-  {\fontsize{18pt}{14pt}\bfseries\leftskip=0pt}
-  {\thesection}
-  {1em}
-  {}
-
-% Define subsection format
-\titleformat{\subsection}
-  [hang]
-  {\fontsize{16pt}{14pt}\bfseries\leftskip=0pt}
-  {\thesubsection}
-  {1em}
-  {}
-
-% Define subsubsection format
-\titleformat{\subsubsection}
-  [hang]
-  {\fontsize{14pt}{14pt}\bfseries\leftskip=0pt}
-  {\thesubsubsection}
-  {1em}
-  {}
-
-% For cross-references and clickable links
-\usepackage{hyperref} % Must be included after most other packages
-
-\usepackage{bookmark} % For better bookmark handling
+\input{config} % Import document configurations
 
 \begin{document}
 
@@ -65,8 +18,8 @@ See Section~\ref{sec:details} for the details.
 See Section~\ref{sec:another-section} for another section.
 
 Here is an example of a bulleted list:
-  \begin{itemize}
-    \item Item 1
+\begin{itemize}
+  \item Item 1
   \item Item 2
   \item Item 3
 \end{itemize}
@@ -82,4 +35,6 @@ See Section~\ref{sec:another-section} for another section.
 See Section~\ref{sec:introduction} for the introduction.
 See Section~\ref{sec:background} for the background.
 See Section~\ref{sec:details} for the details.
+
 \end{document}
+
