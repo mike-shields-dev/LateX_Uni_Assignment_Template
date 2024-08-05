@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[]{article}
 
 % Set page margins
 \usepackage[a4paper, margin=0.8in]{geometry}
@@ -49,6 +49,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{} % Clear existing header and footer
+\fancyhead[L]{Student ID: 2324915} % Left of header with section name
 \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}} % Center of footer with page number
 
 % Remove the horizontal line below the header
@@ -74,15 +75,20 @@
 \setlength{\tabcolsep}{12pt} % Horizontal padding
 \renewcommand{\arraystretch}{1.5} % Vertical padding
 
+% Bibliography packages
+\usepackage[backend=biber,style=numeric]{biblatex}
+\addbibresource{references.bib}
+
 \begin{document}
 
+% Title Page
 \begin{table}[h]
   \centering
   \begin{tabular}{|l|l|}
       \hline
       Course / Programme: & BEng Software Engineering \\
       \hline
-      Module name and code: & .......... \\
+      Module Name and Code: & .......... \\
       \hline
       Student ID: & 2324915 \\
       \hline
@@ -100,14 +106,14 @@
       \hline
       \multicolumn{2}{|l|}{
         \begin{minipage}{\dimexpr\textwidth-2\tabcolsep\relax} % Adjust width to fit the table
-        \vspace{16pt} % Add vertical space to ensure padding
+        \vspace{8pt} % Add vertical space to ensure padding
         Learning Outcomes Assessed:
           \begin{enumerate}
             \item Outcome 1
             \item Outcome 2
             \item Outcome 3
           \end{enumerate}
-          \vspace{16pt} % Add vertical space to ensure padding
+          \vspace{8pt} % Add vertical space to ensure padding
         \end{minipage}
       } \\
       \hline
@@ -116,13 +122,13 @@
 
 \newpage
 
-% Table of Contents
 \tableofcontents
 
-\newpage % Start new page after Table of Contents
+\newpage 
 
 \section{Introduction}
 \label{sec:introduction}
+This assignment references the following \cite{flanagan_2011_javascript}
 This is an introduction section with left-aligned headings. This text is aligned left for headings and justified for paragraphs. This is an example of a paragraph to demonstrate the justification. Hello.
 
 \subsection{Background}
@@ -150,5 +156,9 @@ See Section~\ref{sec:introduction} for the introduction.
 See Section~\ref{sec:background} for the background.
 See Section~\ref{sec:details} for the details.
 
-\label{LastPage}
+\newpage
+% References
+% Print bibliography
+\printbibliography
+
 \end{document}

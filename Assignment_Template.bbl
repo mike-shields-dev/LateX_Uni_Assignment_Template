@@ -1,0 +1,51 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{flanagan_2011_javascript}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=2caeb722af2e88c021f73029f9740851}{%
+           family={Flanagan},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Sebastopol (California) O'reilly}%
+      }
+      \strng{namehash}{2caeb722af2e88c021f73029f9740851}
+      \strng{fullhash}{2caeb722af2e88c021f73029f9740851}
+      \strng{fullhashraw}{2caeb722af2e88c021f73029f9740851}
+      \strng{bibnamehash}{2caeb722af2e88c021f73029f9740851}
+      \strng{authorbibnamehash}{2caeb722af2e88c021f73029f9740851}
+      \strng{authornamehash}{2caeb722af2e88c021f73029f9740851}
+      \strng{authorfullhash}{2caeb722af2e88c021f73029f9740851}
+      \strng{authorfullhashraw}{2caeb722af2e88c021f73029f9740851}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Javascript : the Definitive Guide}
+      \field{year}{2011}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
