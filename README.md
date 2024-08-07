@@ -1,4 +1,4 @@
-# LaTeX Assignment Template
+# University of Bolton LaTeX Assignment Template
 
 Author: <cite>mike-shields-dev</cite>
 
