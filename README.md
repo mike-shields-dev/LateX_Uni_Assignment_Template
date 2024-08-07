@@ -21,5 +21,3 @@ In addition, features of LaTeX that may be useful when producing assignments are
 - Tables
 - Charts and Graphs
 - Bibliography & Citations
-
-The 
