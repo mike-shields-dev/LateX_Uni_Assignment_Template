@@ -12,7 +12,7 @@ This repo contains a LaTeX document that can be used as a starter template and a
 - Line Spacing:              Double
 - Referencing Style:         Harvard Style
 
-In addition, features of LaTeX that may be useful when producing assignment are demonstrated and discussed within the document: 
+In addition, features of LaTeX that may be useful when producing assignments are demonstrated and discussed within the document: 
 
 - Table of Contents
 - Document Structure (sections, subsections, paragraphs etc)
@@ -21,3 +21,5 @@ In addition, features of LaTeX that may be useful when producing assignment are 
 - Tables
 - Charts and Graphs
 - Bibliography & Citations
+
+The 
