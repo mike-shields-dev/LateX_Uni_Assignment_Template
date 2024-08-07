@@ -36,7 +36,7 @@ In addition, features of LaTeX that may be useful when producing assignments are
 This repo has been produced with the following intended working environment:  
 
 - Operating System: [Ubuntu 22.04](https://releases.ubuntu.com/jammy/) or higher.
-- IDE: [VSCode]("https://code.visualstudio.com/") 
+- IDE: [VSCode](https://code.visualstudio.com) 
 - Installed VSCode Extension/s:  [LaTeX-Workshop](https://github.com/James-Yu/LaTeX-Workshop/wiki/Install#settings) 
 - [TeX Live](https://www.tug.org/texlive/) Distribution installed.
 
