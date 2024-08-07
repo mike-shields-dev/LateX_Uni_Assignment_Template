@@ -39,6 +39,7 @@ This repo has been produced with the following intended working environment:
 - IDE: [VSCode](https://code.visualstudio.com) 
 - Installed VSCode Extension/s:  [LaTeX-Workshop](https://github.com/James-Yu/LaTeX-Workshop/wiki/Install#settings) 
 - [TeX Live](https://www.tug.org/texlive/) Distribution installed.
+- [Calibri Font](/Calibri_Font/) Family installed.
 
 Therefore the source code within the `Document.tex` file is written specifically for this environment and may not be compatible with other environments.
 
