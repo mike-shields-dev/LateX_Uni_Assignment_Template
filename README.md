@@ -35,7 +35,7 @@ According to the LaTeX Project [website]("https://www.latex-project.org/"):
 
 In addition to providing a source code template, 
 the document discusses features of LaTeX that may be useful to understand and, know how to implement, 
-when producing assignments are demonstrated and discussed within the document, including:
+when producing assignments, including:
 
 - Table of Contents
 - Document Structure (sections, subsections, paragraphs etc)
