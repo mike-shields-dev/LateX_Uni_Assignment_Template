@@ -1,8 +1,8 @@
 {
   "latex-workshop.latex.recipes": [
     {
-      "name": "xelatex -> biber -> xelatex -> xelatex",
-      "tools": ["xelatex", "biber", "xelatex", "xelatex"]
+      "name": "xelatex -> biber -> xelatex",
+      "tools": ["xelatex", "biber", "xelatex"]
     }
   ],
   "latex-workshop.latex.tools": [
