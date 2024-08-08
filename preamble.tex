@@ -1,114 +1,153 @@
-% Bibliography setup
+%==============================================================
+%BIBLIOGRAPHY
 \usepackage[backend=biber, style=authoryear, sorting=ynt]{biblatex}
-\addbibresource{references.bib}
+\addbibresource{references.bib} % Ensure this file exists
+%==============================================================
 
-% Set page margins
-\usepackage[a4paper, margin=1in]{geometry}
 
-% Use XeLaTeX or LuaLaTeX to handle system fonts
-\usepackage{fontspec}
-\setmainfont{Calibri Light} % Set main font to Calibri Light
+%==============================================================
+%FONTS
+  %MAIN FONT
+  \usepackage{fontspec}
+  \setmainfont{Calibri Light} % Set main font to Calibri Light
+  % Remove \usepackage{lmodern} as it's not needed with fontspec
+  % SERIF FONT
+  % \setromanfont{Computer Modern Roman} % Uncomment if you want to set a serif font
+%==============================================================
 
-% Set line spacing to double
-\usepackage{setspace}
-\doublespacing
 
-% Justify text
-\usepackage{ragged2e}
-\justifying
-
-% Format section headings with titlesec
+%==============================================================
+%HEADINGS
 \usepackage{titlesec}
-
-% Set paragraph indentation to 0pt
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{14pt}
-
-% Define a new command for page break before section titles
-\newcommand{\sectionbreak}{\clearpage}
-
-% Redefine section commands to include a page break
-\let\oldsection\section
-\let\oldsubsection\subsection
-\let\oldsubsubsection\subsubsection
+%==============================================================
 
 
-\renewcommand{\section}[1]{%
-  \sectionbreak
-  \oldsection{#1}%
-}
-
-\renewcommand{\subsection}[1]{%
-  \sectionbreak
-  \oldsubsection{#1}%
-}
-
-\renewcommand{\subsubsection}[1]{%
-  \sectionbreak
-  \oldsubsubsection{#1}%
-}
+%==============================================================
+%MACROS & VARIABLES
+  %STUDENT ID
+  \newcommand{\studentid}{123456789}
+%==============================================================
 
 
-% Define section format
-\titleformat{\section}
+%==============================================================
+%PAGE
+  %HEADER/FOOTER
+  \usepackage{fancyhdr}
+  \pagestyle{fancy}
+  \fancyhf{} % Clear existing header and footer
+  %HEADER
+  \renewcommand{\headrulewidth}{0pt} % Remove horizontal line in header
+  \setlength{\headheight}{15pt} % Adjust header height
+  \fancyhead[L]{Student ID: \studentid} % Set content for the left of the header
+  %FOOTER
+  \usepackage{lastpage} % For page number references
+  \fancyfoot[C]{Page \thepage\ of \pageref{LastPage}} % Center of footer with page number
+  %MARGINS
+  \usepackage[a4paper, margin=1in]{geometry}
+%==============================================================
+
+
+%==============================================================
+%PARAGRAPH
+  %LINE SPACING
+  \usepackage{setspace}
+  \doublespacing
+  %TEXT ALIGNMENT
+  \usepackage{ragged2e}
+  \justifying % Justify text
+  %INDENTATION
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{14pt}
+%==============================================================
+
+
+%==============================================================
+%SECTION
+  %ADD PAGE BREAKS
+  %STYLE & FORMAT
+  \usepackage{titlesec}
+  \titleformat{\section}
   [hang]
   {\fontsize{18pt}{14pt}\bfseries\leftskip=0pt}
   {\thesection} % Section number
   {1em}
-  {} % Empty space for title text formatting
+  {}
 
-% Define subsection format
-\titleformat{\subsection}
+  % Ensure sections start on a new page
+\usepackage{etoolbox}
+\preto\section{\clearpage}
+%==============================================================
+
+
+%==============================================================
+%SUBSECTION
+  %ADD PAGE BREAKS
+  \let\oldsubsection\subsection
+  \renewcommand{\subsection}[1]{
+    \newpage\oldsubsection{#1}
+  }
+  %FORMATTING
+  \titleformat{\subsection}
   [hang]
   {\fontsize{16pt}{14pt}\bfseries\leftskip=0pt}
   {\thesubsection}
   {1em}
   {}
+%==============================================================
 
 
-% Define subsubsection format
-\titleformat{\subsubsection}
+%==============================================================
+%SUBSUBSECTION
+  %ADD PAGE BREAKS
+  \let\oldsubsubsection\subsubsection
+  \renewcommand{\subsubsection}[1]{
+    \newpage\oldsubsubsection{#1}
+  }
+  %FORMATTING
+  \titleformat{\subsubsection}
   [hang]
   {\fontsize{14pt}{14pt}\bfseries\leftskip=0pt}
   {\thesubsubsection}
   {1em}
   {}
+%==============================================================
 
-% Set up the fancyhdr package
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\setlength{\headheight}{15pt} % Adjust the header height
-\fancyhf{} % Clear existing header and footer
-\fancyhead[L]{Student ID: \studentid} % Left of header with section name
-\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}} % Center of footer with page number
 
-% Remove the horizontal line below the header
-\renewcommand{\headrulewidth}{0pt}
-
-% Set up the tocloft package
+%==============================================================
+%TABLE OF CONTENTS
 \usepackage{tocloft}
-\setlength{\cftbeforesecskip}{0pt} % Adjust space between sections in the table of contents
+  %LINE SPACING
+  \setlength{\cftbeforesecskip}{0pt}
+  %INCLUSIONS
+  \usepackage[nottoc,notlof,notlot]{tocbibind}
+%==============================================================
 
-% For page number references
-\usepackage{lastpage} % For page number references
 
-% Include xcolor package for hyperref color options
-\usepackage{xcolor}
+%==============================================================
+%HYPERLINKS
+  %COLORS
+  \usepackage[svgnames]{xcolor}
+  \usepackage[
+    colorlinks=true, % Enable colored links
+    linkcolor=DarkBlue,  % Color for internal links
+    urlcolor=DarkBlue,   % Color for URLs
+    citecolor=DarkBlue,  % Color for citations
+    filecolor=DarkBlue  % Color for file links
+  ]{hyperref}
+%==============================================================
 
-% For cross-references and clickable links
-\usepackage[
-  colorlinks=true, % Enable colored links
-  linkcolor=black,  % Color for internal links
-  urlcolor=black,   % Color for URLs
-  citecolor=black,  % Color for citations
-  filecolor=black,  % Color for file links
-  linkbordercolor=black, % Color for link borders
-  urlbordercolor=black,  % Color for URL borders
-]{hyperref} % Must be included after most other packages
 
+%==============================================================
+%BOOKMARKS
 \usepackage{bookmark} % For better bookmark handling
+%==============================================================
 
 
-% Increase table padding
-\setlength{\tabcolsep}{12pt} % Horizontal padding
-\renewcommand{\arraystretch}{1.5} % Vertical padding
+%==============================================================
+%TABLES
+  %PADDING
+  %HORIZONTAL
+  \setlength{\tabcolsep}{12pt} % Horizontal padding
+  %VERTICAL
+  \renewcommand{\arraystretch}{1.5} % Vertical padding
+%==============================================================
