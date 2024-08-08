@@ -79,7 +79,9 @@
   \label{sec:document-class}
   %TC:endignore
 
-  The document class specifies the type of document you are creating. Common document classes include:  
+  The document class specifies the type of document you are creating. 
+  
+  Common document classes include:  
 
   \begin{itemize}
     \item \textbf{article} - For articles in scientific journals, presentations, short reports, program documentation, invitations, etc.
@@ -87,6 +89,12 @@
     \item \textbf{book} - For real books
     \item \textbf{slides} - For slides
   \end{itemize}
+
+  To specify the document class, use the following command within the document's preamble section:
+
+  \begin{verbatim}
+  \documentclass{article}
+  \end{verbatim}
 
   This document uses the \textbf{article} document class.
 
@@ -97,12 +105,35 @@
   \label{sec:packages-and-libraries}
   %TC:endignore
 
-  Packages and libraries extend the functionality of LaTeX by providing additional features and tools.
+  Packages and libraries extend the functionality of LaTeX by providing additional features and tools. The general syntax for including a package is:
+
+  \begin{verbatim}
+  \usepackage{package-name}
+  \end{verbatim}
 
 %=========================================================
 
   %TC:ignore
-  \subsubsection{Body}
+  \subsubsection{Custom Commands and Settings}
+  \label{sec:custom-commands-and-settings}
+  %TC:endignore
+
+
+Custom commands and settings can be defined in the preamble to simplify the writing process and improve document consistency. 
+There are many aspects of a document that can be customized using custom commands and settings. 
+
+
+Some common tasks achieved through customisations include defining new commands, changing the page layout, 
+and setting up the title, author, and date information.
+
+You may wish to study the \textbf{
+  \href{https://github.com/mike-shields-dev/University_of_Bolton_LaTeX_Assignment_Template/blob/main/preamble.tex}{preamble.tex}
+} file in this documents parent github repository to see what kind of customisations are possible. 
+
+%=========================================================
+
+  %TC:ignore
+  \subsection{Body}
   \label{sec:body}
   %TC:endignore
 
@@ -118,7 +149,7 @@
   The specifications for the University of Bolton's assignment format are as follows:
 
   \begin{itemize}
-    \item Base font: \textbf{Calibri Light} (12pt)
+    \item Default Font: \textbf{Calibri Light} (12pt)
     \item Double line spacing
     \item \textbf{Harvard} style referencing
     \item Page numbers in the format: \textbf{"Page n of m"}
