@@ -1,150 +1,26 @@
 \documentclass[12pt]{article}
 
-% Bibliography setup
-\usepackage[backend=biber, style=authoryear, sorting=ynt]{biblatex}
-\addbibresource{references.bib}
+% Document Macros
+\newcommand{\studentid}{123456}
 
-% Set document metadata
+% Include the preamble
+\input{preamble}
+
 %TC:ignore
+
+% Document Metadata
 \title{UoB LaTex Assignment Template & Guide} 
+
 %TC:endignore
-\author{Michael Shields}
-
-% Set page margins
-\usepackage[a4paper, margin=1in]{geometry}
-
-% Use XeLaTeX or LuaLaTeX to handle system fonts
-\usepackage{fontspec}
-\setmainfont{Calibri Light} % Set main font to Calibri Light
-
-% Set line spacing to double
-\usepackage{setspace}
-\doublespacing
-
-% Justify text
-\usepackage{ragged2e}
-\justifying
-
-% Format section headings with titlesec
-\usepackage{titlesec}
-
-% Set paragraph indentation to 0pt
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{14pt}
-
-% Define section format
-\titleformat{\section}
-  [hang]
-  {\fontsize{18pt}{14pt}\bfseries\leftskip=0pt}
-  {\thesection}
-  {1em}
-  {}
-
-% Define subsection format
-\titleformat{\subsection}
-  [hang]
-  {\fontsize{16pt}{14pt}\bfseries\leftskip=0pt}
-  {\thesubsection}
-  {1em}
-  {}
-
-% Define subsubsection format
-\titleformat{\subsubsection}
-  [hang]
-  {\fontsize{14pt}{14pt}\bfseries\leftskip=0pt}
-  {\thesubsubsection}
-  {1em}
-  {}
-
-% Set up the fancyhdr package
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\setlength{\headheight}{15pt} % Adjust the header height
-\fancyhf{} % Clear existing header and footer
-\fancyhead[L]{Student ID: 2324915} % Left of header with section name
-\fancyfoot[C]{Page \thepage\ of \pageref{LastPage}} % Center of footer with page number
-
-% Remove the horizontal line below the header
-\renewcommand{\headrulewidth}{0pt}
-
-% Set up the tocloft package
-\usepackage{tocloft}
-\setlength{\cftbeforesecskip}{0pt} % Adjust space between sections in the table of contents
-
-% For page number references
-\usepackage{lastpage} % For page number references
-
-% Include xcolor package for hyperref color options
-\usepackage{xcolor}
-
-% For cross-references and clickable links
-\usepackage[
-  colorlinks=true, % Enable colored links
-  linkcolor=black,  % Color for internal links
-  urlcolor=black,   % Color for URLs
-  citecolor=black,  % Color for citations
-  filecolor=black,  % Color for file links
-  linkbordercolor=black, % Color for link borders
-  urlbordercolor=black,  % Color for URL borders
-]{hyperref} % Must be included after most other packages
-
-\usepackage{bookmark} % For better bookmark handling
-
-
-% Increase table padding
-\setlength{\tabcolsep}{12pt} % Horizontal padding
-\renewcommand{\arraystretch}{1.5} % Vertical padding
-
 
 \begin{document}
 
-%TC:ignore
-\begin{table}[h]
-  \centering
-  \begin{tabular}{|l|l|}
-      \hline
-      Course / Programme: & BEng Software Engineering \\
-      \hline
-      Module Name and Code: & .......... \\
-      \hline
-      Student ID: & 2324915 \\
-      \hline
-      Tutor: & ............. \\
-      \hline
-      Assignment Number: & 0 \\
-      \hline
-      Assignment Title: & ........... \\
-      \hline
-      Weighting: & 0\% of overall grade \\
-      \hline
-      Issue Date: & 00/00/0000 \\
-      \hline
-      Submission Deadline: & 00/00/0000 @00:00 \\
-      \hline
-      \multicolumn{2}{|l|}{
-        \begin{minipage}{\dimexpr\textwidth-2\tabcolsep\relax} % Adjust width to fit the table
-        \vspace{8pt} % Add vertical space to ensure padding
-        Learning Outcomes Assessed:
-          \begin{enumerate}
-            \item Outcome 1
-            \item Outcome 2
-            \item Outcome 3
-          \end{enumerate}
-          \vspace{8pt} % Add vertical space to ensure padding
-        \end{minipage}
-      } \\
-      \hline
-  \end{tabular}
-\end{table}
-%TC:endignore
-
-\newpage
 
 %TC:ignore
+\input{title-page}
 \tableofcontents
 %TC:endignore
 
-\newpage 
 
 %TC:ignore
 \section{Introduction}
