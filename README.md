@@ -61,7 +61,7 @@ Use the links in the above list for guidance.
 
 ## Generating Document Word Count
 
-`texcount` is a tool that should be installed along with `Tex Live`. 
+`texcount` is a tool that should be installed as part of the `Tex Live` installation. 
 It is a command line tool that can be used to count the following aspects of a document: 
 
 - words in text
@@ -71,6 +71,12 @@ It is a command line tool that can be used to count the following aspects of a d
 - number of floats/figures/tables
 - number of inlined formulae
 - number of displayed formulae
+
+To check that `texcount` is properly installed, run the command:
+
+```bash
+$ texcount --version
+```
 
 The UoB assignment specifications require that a word count is provided at the end of the document's main content. 
 This word count should exclude all text except that within paragraphs. 
