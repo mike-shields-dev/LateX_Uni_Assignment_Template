@@ -24,13 +24,38 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{14pt}
 
+% Define a new command for page break before section titles
+\newcommand{\sectionbreak}{\clearpage}
+
+% Redefine section commands to include a page break
+\let\oldsection\section
+\let\oldsubsection\subsection
+\let\oldsubsubsection\subsubsection
+
+
+\renewcommand{\section}[1]{%
+  \sectionbreak
+  \oldsection{#1}%
+}
+
+\renewcommand{\subsection}[1]{%
+  \sectionbreak
+  \oldsubsection{#1}%
+}
+
+\renewcommand{\subsubsection}[1]{%
+  \sectionbreak
+  \oldsubsubsection{#1}%
+}
+
+
 % Define section format
 \titleformat{\section}
   [hang]
   {\fontsize{18pt}{14pt}\bfseries\leftskip=0pt}
-  {\thesection}
+  {\thesection} % Section number
   {1em}
-  {}
+  {} % Empty space for title text formatting
 
 % Define subsection format
 \titleformat{\subsection}
@@ -39,6 +64,7 @@
   {\thesubsection}
   {1em}
   {}
+
 
 % Define subsubsection format
 \titleformat{\subsubsection}
