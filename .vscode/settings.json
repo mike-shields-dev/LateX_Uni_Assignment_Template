@@ -18,5 +18,6 @@
       "args": ["%DOCFILE%"],
       "env": {}
     }
-  ]
+  ],
+  "cSpell.words": ["calibri", "endignore", "fontspec"]
 }

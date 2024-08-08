@@ -1,135 +1,171 @@
+%=========================================================
 \documentclass[12pt]{article}
 
-% Document Macros
-\newcommand{\studentid}{123456}
-
-% Include the preamble
 \input{preamble}
 
 %TC:ignore
-
-% Document Metadata
-\title{UoB LaTex Assignment Template & Guide} 
-
+\title{UoB LaTex Assignment Template & Guide}
 %TC:endignore
 
 \begin{document}
+  \input{title-page}
+  \newpage
+  \tableofcontents
 
+%=========================================================
 
-%TC:ignore
-\input{title-page}
-\tableofcontents
-%TC:endignore
+  %TC:ignore
+  \section{Introduction}
+  \label{sec:introduction}
+  %TC:endignore
 
+  This document serves as a template for producing written assignments in accordance with the University of Bolton's assignment format specifications using LaTeX.
 
-%TC:ignore
-\section{Introduction}
-\label{sec:introduction}
-%TC:endignore
+  The subject material of this document serves as a guide demonstrating how to use various LaTeX features to address common requirements for academic writing, such as:
 
-This document serves as a template for producing written assignments in accordance with the University of Bolton's assignment format specifications.
+  \begin{itemize}
+    \item Table of Contents
+    \item Document Structure
+    \item Lists
+    \item Cross-references / Internal Hyperlinks
+    \item External Hyperlinks
+    \item References and Citations
+    \item Mathematical Expressions
+    \item Computer Source Code
+  \end{itemize}
 
-The subject material of this document serves as a guide demonstrating how to use various \LaTeX{} features to address common requirements for academic writing, such as:
+%=========================================================
 
-\begin{itemize}
-  \item Table of Contents
-  \item Document Structure
-  \item Lists
-  \item Cross-references / Internal Hyperlinks
-  \item External Hyperlinks
-  \item References and Citations
-  \item Mathematical Expressions
-  \item Computer Source Code
-\end{itemize}
+  %TC:ignore
+  \section{What is LaTeX?}
+  \label{sec:what-is-latex}
+  %TC:endignore
 
-%TC:ignore
-\section{What is LaTeX?}
-\label{sec:what-is-latex}
-%TC:endignore
+  LaTeX is a typesetting system commonly used for producing scientific and technical documents. It is widely used in academia for writing research papers, theses, and other technical documents. 
 
-\LaTeX{} is a typesetting system commonly used for producing scientific and technical documents. It is widely used in academia for writing research papers, theses, and other technical documents. 
+  To learn more about LaTeX, visit the \href{https://www.latex-project.org/}{LaTeX Project Website}. 
 
-To learn more about \LaTeX{}, visit the \href{https://www.latex-project.org/}{\LaTeX{} Project Website}. 
+  Other useful resources include \cite{mittelbach_2023_the}
 
-Other useful resources include \cite{mittelbach_2023_the}
+%=========================================================
 
-%TC:ignore
-\subsubsection{The Anatomy of a LaTeX Document}
-\label{sec:the-anatomy-of-a-latex-document}
-%TC:endignore
+  %TC:ignore
+  \section{The Structure of a LaTeX Document}
+  \label{sec:the-structure-of-a-latex-document}
+  %TC:endignore
 
-A \LaTeX{} document consists of two main parts: the \textbf{preamble} and the \textbf{document body}. The preamble contains document-wide settings and configurations, while the document body contains the actual content of the document.
+  A LaTeX document consists of two main parts: the \textbf{preamble} and the \textbf{document body}. 
 
-The preamble includes aspects of the document such as:
+%=========================================================
 
-\begin{itemize}
-  \item Document class declaration
-  \item Packages and libraries and external resources
-  \item Custom commands and settings
-  \item Title, author, and date information
-\end{itemize}
+  %TC:ignore
+  \subsection{Preamble}
+  \label{sec:preamble}
+  %TC:endignore
 
-%TC:ignore
-\section{UoB Assignment Format Specifications}
-\label{sec:uob-assignment-format-specifications}
-%TC:endignore
+  The preamble contains document-wide settings and configurations such as:
 
-The specifications for the University of Bolton's assignment format are as follows:
+  \begin{itemize}
+    \item Document class declaration
+    \item Packages and libraries
+    \item Custom commands and settings
+    \item Title, author, and date information
+  \end{itemize}
 
-\begin{itemize}
-  \item Base font: \textbf{Calibri Light} (12pt)
-  \item Double line spacing
-  \item \textbf{Harvard} style referencing
-  \item Page numbers in the format: \textbf{"Page n of m"}
-  \item A table of contents
-  \item A title page
-  \item In text citations
-  \item A word count at the end of the document
-  \item A bibliography
-\end{itemize}
+%=========================================================
 
-%TC:ignore
-\subsubsection{Font}
-\label{sec:details}
-%TC:endignore
+  %TC:ignore
+  \subsubsection{Document Class}
+  \label{sec:document-class}
+  %TC:endignore
 
-The base font for the document: \textbf{Calibri Light} is not a font that is typically available in \LaTeX{} distributions. However, it is possible to use \textbf{installed} system fonts with \LaTeX{} by using the \texttt{fontspec} package.
+  The document class specifies the type of document you are creating. Common document classes include:  
 
-\textit{ Note: The \textbf{Calibri Font Family} ttf files are located in the \texttt{\href{https://github.com/mike-shields-dev/University_of_Bolton_LaTeX_Assignment_Template/tree/main/assets}{assets}} directory of this document's parent github repository.} 
+  \begin{itemize}
+    \item \textbf{article} - For articles in scientific journals, presentations, short reports, program documentation, invitations, etc.
+    \item \textbf{report} - For longer reports containing several chapters, small books, PhD theses, etc.
+    \item \textbf{book} - For real books
+    \item \textbf{slides} - For slides
+  \end{itemize}
 
+  This document uses the \textbf{article} document class.
 
-The following code snippet demonstrates how to set the main font to \textbf{Calibri Light}:
-\begin{verbatim}
-\usepackage{fontspec}
-\setmainfont{Calibri Light}
-\end{verbatim}
+%=========================================================
+ 
+  %TC:ignore
+  \subsubsection{Packages and Libraries}
+  \label{sec:packages-and-libraries}
+  %TC:endignore
 
-%TC:ignore
-\section{Another Section}
-\label{sec:another-section}
-%TC:endignore
+  Packages and libraries extend the functionality of LaTeX by providing additional features and tools.
 
-\newpage
+%=========================================================
 
-%TC:ignore
-\section{Conclusion}
-\label{sec:conclusion}
-%TC:endignore
+  %TC:ignore
+  \subsubsection{Body}
+  \label{sec:body}
+  %TC:endignore
 
-\newpage
+  The document body contains the actual content of the document, such as text, images, tables, and other elements.
 
-%TC:ignore
-\section{Word Count}
-\label{sec:word-count}
-%TC:endignore
+%=========================================================
 
-The word count for this document is: \textbf{[word count]}.
+  %TC:ignore
+  \section{UoB Assignment Format Specifications}
+  \label{sec:uob-assignment-format-specifications}
+  %TC:endignore
 
+  The specifications for the University of Bolton's assignment format are as follows:
 
+  \begin{itemize}
+    \item Base font: \textbf{Calibri Light} (12pt)
+    \item Double line spacing
+    \item \textbf{Harvard} style referencing
+    \item Page numbers in the format: \textbf{"Page n of m"}
+    \item A table of contents
+    \item A title page
+    \item In text citations
+    \item A word count at the end of the document
+    \item A bibliography
+  \end{itemize}
 
-\newpage
+%=========================================================
 
-% Print the bibliography
-\printbibliography
+  %TC:ignore
+  \subsubsection{Font}
+  \label{sec:details}
+  %TC:endignore
 
+  The default font of this document is \textbf{Calibri Light} which is part of the Calibri font family. 
+  This font is not natively available in \LaTeX{}, so we use the \textbf{fontspec} package to set the main font to \textbf{Calibri Light}.
+  
+
+  The following code snippet demonstrates how to set the main font to \textbf{Calibri Light}:
+  
+  \begin{verbatim}
+  \usepackage{fontspec}
+  \setmainfont{Calibri Light}
+  \end{verbatim}
+
+%=========================================================
+
+  %TC:ignore
+  \section{Conclusion}
+  \label{sec:conclusion}
+  %TC:endignore
+
+%=========================================================
+
+  %TC:ignore
+  \section*{Word Count}
+  \label{sec:word-count}
+  \addcontentsline{toc}{section}{Word Count}
+  %TC:endignore
+
+  The word count for this document is: \textbf{[word count]}.
+
+%=========================================================
+  \printbibliography
+  \addcontentsline{toc}{section}{References}
+  
 \end{document}
