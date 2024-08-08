@@ -4,13 +4,23 @@ Author: <cite>mike-shields-dev</cite>
 
 ## Introduction
 
-This repo contains a LaTeX document that can be used as a starter template and also serves as a guide for producing assignments in the format required by the University of Bolton:
+This repo is a starter project for using LaTeX to create assignments that conform to the assignment specifications, 
+that are required by the University of Bolton's Computer Science & Software Engineering department.
 
-- Font Family: Calibri
+The specifications are:
+
+- Default Font: Calibri
 - Default Font Size: 12pt/px
+- Heading Text Alignment: Left
 - Paragraph Text Alignment: Justify
 - Line Spacing: Double
-- Referencing Style: Harvard Style
+- Referencing Style: Harvard Style (author, date)
+- Figure caption position: Below Figures
+- Table caption position: Above Table
+- A Table of Contents
+- Bibliography Entry Order: Author's Surname (ascending)
+
+## What is LaTeX (pronounced: "Lah-Tek")
 
 According to the LaTeX Project [website]("https://www.latex-project.org/"):
 
@@ -21,12 +31,16 @@ According to the LaTeX Project [website]("https://www.latex-project.org/"):
     </q>
 </p>
 
-In addition, features of LaTeX that may be useful when producing assignments are demonstrated and discussed within the document:
+## What does the Document Contain?
+
+In addition to providing a source code template, 
+the document discusses features of LaTeX that may be useful to understand and how to implement, 
+when producing assignments are demonstrated and discussed within the document, including:
 
 - Table of Contents
 - Document Structure (sections, subsections, paragraphs etc)
 - Mathematical Expressions
-- Code Blocks and Snippets
+- Code Blocks/Snippets
 - Tables
 - Charts and Graphs
 - Bibliography & Citations
@@ -61,7 +75,7 @@ It is a command line tool that can be used to count the following aspects of a d
 The UoB assignment specifications require that a word count is provided at the end of the document's main content. 
 This word count should exclude all text except that within paragraphs. 
 
-As I have not been able to find a way to configure `texcount` to omit certain element within a LaTeX document, the following syntax is used to wrap any specific content that should be omitted from the word count: 
+As I have not been able to find a way to configure `texcount` to omit certain elements within a LaTeX document, the following syntax is used to wrap any specific content that should be omitted from the word count: 
 
 ```latex
 %TC:ignore 
@@ -69,7 +83,7 @@ As I have not been able to find a way to configure `texcount` to omit certain el
 %TC:endignore
 ```
 
-To determine the word count run the `wordcount.sh` script in the projects root directory:
+To determine the word count run the `wordcount.sh` script in the project's root directory:
 
 ```bash
 ./wordcount.sh
