@@ -59,6 +59,24 @@ Therefore the source code within the `Document.tex` file is written specifically
 
 Use the links in the above list for guidance.
 
+## Building (compiling) the Document
+
+Compiling the `Document.tex` results in a `Document.pdf`. 
+
+To build the document, open `Document.tex` in VSCode's text editor panel, and use one of the following methods:
+
+Method 1:
+Type the shortcut `ctrl + alt + build` (on Ubuntu, other OS keymappings may differ)
+
+Method 2: 
+Click this icon:  ![Screenshot from 2024-08-08 21-44-31](https://github.com/user-attachments/assets/50d391e3-37e8-4cba-adbe-dc2d624ab380) , 
+which is located in the right-hand side of the Editor Panel's top header.
+
+Method 3:
+Type the shortcut `ctrl + shift + p` to open the Command Palette Menu and locate and click the command:
+
+`LaTeX Workshop: Build LaTeX project`
+
 ## Generating Document Word Count
 
 `texcount` is a tool that should be installed as part of the `Tex Live` installation. 
