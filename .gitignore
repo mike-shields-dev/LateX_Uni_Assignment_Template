@@ -5,3 +5,4 @@
 !*.md
 !assets/
 !*.sh
+!.vscode/

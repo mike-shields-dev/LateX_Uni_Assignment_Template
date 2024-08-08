@@ -1,8 +1,8 @@
 {
   "latex-workshop.latex.recipes": [
     {
-      "name": "xelatex",
-      "tools": ["xelatex"]
+      "name": "xelatex -> biber -> xelatex -> xelatex",
+      "tools": ["xelatex", "biber", "xelatex", "xelatex"]
     }
   ],
   "latex-workshop.latex.tools": [
@@ -10,6 +10,12 @@
       "name": "xelatex",
       "command": "xelatex",
       "args": ["-synctex=1", "-interaction=nonstopmode", "%DOC%"],
+      "env": {}
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": ["%DOCFILE%"],
       "env": {}
     }
   ]
