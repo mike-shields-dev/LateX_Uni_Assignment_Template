@@ -1,7 +1,17 @@
 \documentclass[12pt]{article}
 
+% Bibliography setup
+\usepackage[backend=biber, style=authoryear, sorting=ynt]{biblatex}
+\addbibresource{references.bib}
+
+% Set document metadata
+%TC:ignore
+\title{UoB LaTex Assignment Template & Guide} 
+%TC:endignore
+\author{Michael Shields}
+
 % Set page margins
-\usepackage[a4paper, margin=0.8in]{geometry}
+\usepackage[a4paper, margin=1in]{geometry}
 
 % Use XeLaTeX or LuaLaTeX to handle system fonts
 \usepackage{fontspec}
@@ -10,6 +20,10 @@
 % Set line spacing to double
 \usepackage{setspace}
 \doublespacing
+
+% Justify text
+\usepackage{ragged2e}
+\justifying
 
 % Format section headings with titlesec
 \usepackage{titlesec}
@@ -42,9 +56,6 @@
   {1em}
   {}
 
-% Include xcolor package for hyperref color options
-\usepackage{xcolor}
-
 % Set up the fancyhdr package
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -56,8 +67,15 @@
 % Remove the horizontal line below the header
 \renewcommand{\headrulewidth}{0pt}
 
+% Set up the tocloft package
+\usepackage{tocloft}
+\setlength{\cftbeforesecskip}{0pt} % Adjust space between sections in the table of contents
+
 % For page number references
 \usepackage{lastpage} % For page number references
+
+% Include xcolor package for hyperref color options
+\usepackage{xcolor}
 
 % For cross-references and clickable links
 \usepackage[
@@ -72,17 +90,15 @@
 
 \usepackage{bookmark} % For better bookmark handling
 
+
 % Increase table padding
 \setlength{\tabcolsep}{12pt} % Horizontal padding
 \renewcommand{\arraystretch}{1.5} % Vertical padding
 
-% Bibliography packages
-\usepackage[backend=biber,style=numeric]{biblatex}
-\addbibresource{references.bib}
 
 \begin{document}
 
-% Title Page
+%TC:ignore
 \begin{table}[h]
   \centering
   \begin{tabular}{|l|l|}
@@ -120,50 +136,124 @@
       \hline
   \end{tabular}
 \end{table}
+%TC:endignore
 
 \newpage
 
+%TC:ignore
 \tableofcontents
+%TC:endignore
 
 \newpage 
 
+%TC:ignore
 \section{Introduction}
 \label{sec:introduction}
-This assignment references the following \cite{flanagan_2011_javascript}
-This is an introduction section with left-aligned headings. This text is aligned left for headings and justified for paragraphs. This is an example of a paragraph to demonstrate the justification. Hello.
+%TC:endignore
 
-\subsection{Background}
-\label{sec:background}
-See Section~\ref{sec:introduction} for the introduction.
-See Section~\ref{sec:details} for the details.
-See Section~\ref{sec:another-section} for another section.
+This document serves as a template for producing written assignments in accordance with the University of Bolton's assignment format specifications.
 
-Here is an example of a bulleted list:
+The subject material of this document serves as a guide demonstrating how to use various \LaTeX{} features to address common requirements for academic writing, such as:
+
 \begin{itemize}
-  \item Item 1
-  \item Item 2
-  \item Item 3
+  \item Table of Contents
+  \item Document Structure
+  \item Lists
+  \item Cross-references / Internal Hyperlinks
+  \item External Hyperlinks
+  \item References and Citations
+  \item Mathematical Expressions
+  \item Computer Source Code
 \end{itemize}
 
-\subsubsection{Details}
-\label{sec:details}
-See Section~\ref{sec:introduction} for the introduction.
-See Section~\ref{sec:background} for the background.
-See Section~\ref{sec:another-section} for another section.
+%TC:ignore
+\section{What is LaTeX?}
+\label{sec:what-is-latex}
+%TC:endignore
 
+\LaTeX{} is a typesetting system commonly used for producing scientific and technical documents. It is widely used in academia for writing research papers, theses, and other technical documents. 
+
+To learn more about \LaTeX{}, visit the \href{https://www.latex-project.org/}{\LaTeX{} Project Website}. 
+
+Other useful resources include \cite{mittelbach_2023_the}
+
+%TC:ignore
+\subsubsection{The Anatomy of a LaTeX Document}
+\label{sec:the-anatomy-of-a-latex-document}
+%TC:endignore
+
+A \LaTeX{} document consists of two main parts: the \textbf{preamble} and the \textbf{document body}. The preamble contains document-wide settings and configurations, while the document body contains the actual content of the document.
+
+The preamble includes aspects of the document such as:
+
+\begin{itemize}
+  \item Document class declaration
+  \item Packages and libraries and external resources
+  \item Custom commands and settings
+  \item Title, author, and date information
+\end{itemize}
+
+%TC:ignore
+\section{UoB Assignment Format Specifications}
+\label{sec:uob-assignment-format-specifications}
+%TC:endignore
+
+The specifications for the University of Bolton's assignment format are as follows:
+
+\begin{itemize}
+  \item Base font: \textbf{Calibri Light} (12pt)
+  \item Double line spacing
+  \item \textbf{Harvard} style referencing
+  \item Page numbers in the format: \textbf{"Page n of m"}
+  \item A table of contents
+  \item A title page
+  \item In text citations
+  \item A word count at the end of the document
+  \item A bibliography
+\end{itemize}
+
+%TC:ignore
+\subsubsection{Font}
+\label{sec:details}
+%TC:endignore
+
+The base font for the document: \textbf{Calibri Light} is not a font that is typically available in \LaTeX{} distributions. However, it is possible to use \textbf{installed} system fonts with \LaTeX{} by using the \texttt{fontspec} package.
+
+\textit{ Note: The \textbf{Calibri Font Family} ttf files are located in the \texttt{\href{https://github.com/mike-shields-dev/University_of_Bolton_LaTeX_Assignment_Template/tree/main/assets}{assets}} directory of this document's parent github repository.} 
+
+
+The following code snippet demonstrates how to set the main font to \textbf{Calibri Light}:
+\begin{verbatim}
+\usepackage{fontspec}
+\setmainfont{Calibri Light}
+\end{verbatim}
+
+%TC:ignore
 \section{Another Section}
 \label{sec:another-section}
-See Section~\ref{sec:introduction} for the introduction.
-See Section~\ref{sec:background} for the background.
-See Section~\ref{sec:details} for the details.
+%TC:endignore
 
 \newpage
+
+%TC:ignore
 \section{Conclusion}
 \label{sec:conclusion}
+%TC:endignore
 
 \newpage
-% References
-% Print bibliography
+
+%TC:ignore
+\section{Word Count}
+\label{sec:word-count}
+%TC:endignore
+
+The word count for this document is: \textbf{[word count]}.
+
+
+
+\newpage
+
+% Print the bibliography
 \printbibliography
 
 \end{document}
