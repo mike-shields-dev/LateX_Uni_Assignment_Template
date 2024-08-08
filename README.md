@@ -75,7 +75,7 @@ It is a command line tool that can be used to count the following aspects of a d
 To check that `texcount` is properly installed, run the command:
 
 ```bash
-$ texcount --version
+texcount --version
 ```
 
 The UoB assignment specifications require that a word count is provided at the end of the document's main content. 
