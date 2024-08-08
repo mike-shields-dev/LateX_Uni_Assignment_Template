@@ -44,3 +44,37 @@ This repo has been produced with the following intended working environment:
 Therefore the source code within the `Document.tex` file is written specifically for this environment and may not be compatible with other environments.
 
 Use the links in the above list for guidance.
+
+## Generating Document Word Count
+
+`texcount` is a tool that should be installed along with `Tex Live`. 
+It is a command line tool that can be used to count the following aspects of a document: 
+
+- words in text
+- words in headers
+- words in float captions, footnotes, etc.
+- number of headers
+- number of floats/figures/tables
+- number of inlined formulae
+- number of displayed formulae
+
+The UoB assignment specifications require that a word count is provided at the end of the document's main content. 
+This word count should exclude all text except that within paragraphs. 
+
+As I have not been able to find a way to configure `texcount` to omit certain element within a LaTeX document, the following syntax is used to wrap any specific content that should be omitted from the word count: 
+
+```latex
+%TC:ignore 
+...some content...
+%TC:endignore
+```
+
+To determine the word count run the `wordcount.sh` script in the projects root directory:
+
+```bash
+./wordcount.sh
+```
+
+Manually enter the word count into the `Word Count` section within `Document.tex`
+
+I am also looking to find a way to automate this process, possibly through scripting.
