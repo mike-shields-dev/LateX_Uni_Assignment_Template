@@ -10,9 +10,8 @@
   %MAIN FONT
   \usepackage{fontspec}
   \setmainfont{Calibri Light} % Set main font to Calibri Light
-  % Remove \usepackage{lmodern} as it's not needed with fontspec
-  % SERIF FONT
-  % \setromanfont{Computer Modern Roman} % Uncomment if you want to set a serif font
+  % BOLD FONT
+  \newfontface\CalibriBold{Calibri Bold}
 %==============================================================
 
 
@@ -68,7 +67,7 @@
   \usepackage{titlesec}
   \titleformat{\section}
   [hang]
-  {\fontsize{18pt}{14pt}\bfseries\leftskip=0pt}
+  {\CalibriBold\fontsize{18pt}{14pt}\bfseries\leftskip=0pt}
   {\thesection} % Section number
   {1em}
   {}
@@ -89,7 +88,7 @@
   %FORMATTING
   \titleformat{\subsection}
   [hang]
-  {\fontsize{16pt}{14pt}\bfseries\leftskip=0pt}
+  {\CalibriBold\fontsize{16pt}{14pt}\bfseries\leftskip=0pt}
   {\thesubsection}
   {1em}
   {}
@@ -106,7 +105,7 @@
   %FORMATTING
   \titleformat{\subsubsection}
   [hang]
-  {\fontsize{14pt}{14pt}\bfseries\leftskip=0pt}
+  {\CalibriBold\fontsize{14pt}{14pt}\bfseries\leftskip=0pt}
   {\thesubsubsection}
   {1em}
   {}
