@@ -70,7 +70,7 @@ Type the shortcut `ctrl + alt + build` (on Ubuntu, other OS keymappings may diff
 
 Method 2: 
 Click this icon:  ![Screenshot from 2024-08-08 21-44-31](https://github.com/user-attachments/assets/50d391e3-37e8-4cba-adbe-dc2d624ab380) , 
-which is located in the right-hand side of the Editor Panel's top header.
+which is located on the right-hand side of the Editor Panel's top header.
 
 Method 3:
 Type the shortcut `ctrl + shift + p` to open the Command Palette Menu and locate and click the command:
